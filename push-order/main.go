@@ -20,7 +20,8 @@ const (
 
 func main() {
 	// Connect to NATS
-	nc, _ := nats.Connect(nats.DefaultURL)
+	// nc, _ := nats.Connect(nats.DefaultURL)
+	nc, _ := nats.Connect("nats://172.17.0.1:4222")
 	// Creates JetStreamContext
 	js, err := nc.JetStream()
 	checkErr(err)
