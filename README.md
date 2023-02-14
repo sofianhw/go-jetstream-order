@@ -1,5 +1,7 @@
 git clone git@github.com:sofianhw/go-jetstream-order.git
 
+cd go-jetstream-order
+
 docker build . -t gotainer
 
 docker run --name goexec -v $(pwd):/app -d -i -t gotainer /bin/sh
